@@ -4,6 +4,8 @@ import { WelcomeHome } from "@/components/WelcomeHome";
 import { MoodTracker } from "@/components/MoodTracker";
 import { JournalInterface } from "@/components/JournalInterface";
 import { AIChat } from "@/components/AIChat";
+import { RelationshipTracker } from "@/components/RelationshipTracker";
+import { PersonalInsights } from "@/components/PersonalInsights";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("home");
@@ -17,19 +19,9 @@ const Index = () => {
       case "chat":
         return <AIChat />;
       case "relationships":
-        return (
-          <div className="max-w-2xl mx-auto text-center py-16">
-            <h2 className="text-3xl font-bold gradient-text mb-4">Relationship Tracker</h2>
-            <p className="text-muted-foreground">Coming soon - Track your connections with important people</p>
-          </div>
-        );
+        return <RelationshipTracker />;
       case "insights":
-        return (
-          <div className="max-w-2xl mx-auto text-center py-16">
-            <h2 className="text-3xl font-bold gradient-text mb-4">Personal Insights</h2>
-            <p className="text-muted-foreground">Coming soon - Beautiful analytics of your emotional journey</p>
-          </div>
-        );
+        return <PersonalInsights />;
       default:
         return <WelcomeHome setActiveTab={setActiveTab} />;
     }
