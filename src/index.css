@@ -1,15 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* SoulSync Design System - Calm, cozy mental wellness aesthetic */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core SoulSync Brand Colors */
+    --background: 30 20% 98%;
+    --foreground: 260 15% 25%;
+    
+    /* Pastel Palette */
+    --lavender: 260 60% 85%;
+    --lavender-soft: 260 40% 90%;
+    --lavender-deep: 260 50% 70%;
+    
+    --blush: 340 70% 85%;
+    --blush-soft: 340 50% 90%;
+    --blush-deep: 340 60% 75%;
+    
+    --mint: 140 50% 85%;
+    --mint-soft: 140 30% 90%;
+    --mint-deep: 140 40% 75%;
+    
+    --cream: 30 30% 95%;
+    --cream-warm: 25 40% 92%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--lavender)), hsl(var(--blush)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--cream)), hsl(var(--lavender-soft)));
+    --gradient-mood: linear-gradient(90deg, hsl(var(--mint)), hsl(var(--blush)));
+    --gradient-journal: linear-gradient(120deg, hsl(var(--blush-soft)), hsl(var(--lavender-soft)));
+    
+    /* UI Colors */
+    --card: 30 30% 97%;
+    --card-foreground: 260 15% 25%;
+    
+    --popover: 30 30% 97%;
+    --popover-foreground: 260 15% 25%;
+    
+    --primary: 260 50% 70%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 140 40% 75%;
+    --secondary-foreground: 260 15% 25%;
+    
+    --muted: 30 20% 90%;
+    --muted-foreground: 260 10% 50%;
+    
+    --accent: 340 60% 75%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 60% 70%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 260 20% 85%;
+    --input: 260 20% 85%;
+    --ring: 260 50% 70%;
+    
+    --radius: 1rem;
+    
+    /* Shadows */
+    --shadow-gentle: 0 4px 20px -4px hsl(var(--lavender) / 0.3);
+    --shadow-card: 0 8px 30px -8px hsl(var(--lavender) / 0.2);
+    --shadow-mood: 0 6px 25px -6px hsl(var(--blush) / 0.4);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -56,41 +112,49 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark mode with softer, warmer tones */
+    --background: 260 20% 8%;
+    --foreground: 30 20% 92%;
+    
+    --lavender: 260 40% 60%;
+    --lavender-soft: 260 30% 70%;
+    --lavender-deep: 260 50% 50%;
+    
+    --blush: 340 50% 65%;
+    --blush-soft: 340 40% 75%;
+    --blush-deep: 340 60% 55%;
+    
+    --mint: 140 35% 65%;
+    --mint-soft: 140 25% 75%;
+    --mint-deep: 140 45% 55%;
+    
+    --cream: 30 15% 15%;
+    --cream-warm: 25 20% 18%;
+    
+    --card: 260 20% 12%;
+    --card-foreground: 30 20% 92%;
+    
+    --popover: 260 20% 12%;
+    --popover-foreground: 30 20% 92%;
+    
+    --primary: 260 40% 60%;
+    --primary-foreground: 260 20% 8%;
+    
+    --secondary: 140 35% 65%;
+    --secondary-foreground: 260 20% 8%;
+    
+    --muted: 260 15% 20%;
+    --muted-foreground: 260 10% 70%;
+    
+    --accent: 340 50% 65%;
+    --accent-foreground: 260 20% 8%;
+    
+    --destructive: 0 60% 60%;
+    --destructive-foreground: 260 20% 8%;
+    
+    --border: 260 15% 25%;
+    --input: 260 15% 25%;
+    --ring: 260 40% 60%;
   }
 }
 
@@ -100,6 +164,74 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+    background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--cream)));
+    min-height: 100vh;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  /* SoulSync Component Styles */
+  .soul-card {
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .mood-circle {
+    @apply w-16 h-16 rounded-full flex items-center justify-center text-2xl cursor-pointer transition-all duration-300;
+    box-shadow: var(--shadow-mood);
+  }
+  
+  .mood-circle:hover {
+    @apply scale-110;
+    box-shadow: var(--shadow-gentle);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .journal-prompt {
+    @apply p-4 rounded-xl border border-border/30 bg-gradient-to-br;
+    background: var(--gradient-journal);
+  }
+  
+  .emotion-tag {
+    @apply px-3 py-1 rounded-full text-sm font-medium border transition-all duration-200;
+  }
+  
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .pulse-gentle {
+    animation: pulse-gentle 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-gentle {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
   }
 }
